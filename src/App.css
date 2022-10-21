@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+img {
+  max-width: 300px;
+  width:100%;
+  margin: auto;
+  display: block;
+  border-radius: 25px;
+}
+
+.favorite-items img {
+  max-height: 150px;
+}
+
+.favorite-items div {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
