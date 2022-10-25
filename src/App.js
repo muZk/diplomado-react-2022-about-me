@@ -14,42 +14,22 @@ function ProfileHeader() {
   )
 }
 
+function FavoriteItem({ image, intruction, description }) {
+  return (
+    <div>
+      <img src={image} alt="" />
+      <p className="bold">{intruction}</p>
+      <p>{description}</p>
+    </div>
+  )
+}
+
 function FavoriteItems() {
   return (
     <div className="favorite-items">
-      <Work />
-      <FavoriteSerie />
-      <FavoriteHero />
-    </div>
-  )
-}
-
-function Work() {
-  return (
-    <div>
-      <img src={work} alt="Meme del perrito" />
-      <p className="bold">Me dedico a...</p>
-      <p>Crear aplicaciones web</p>
-    </div>
-  )
-}
-
-function FavoriteHero() {
-  return (
-    <div>
-      <img src={heroe} alt="Hisoka" />
-      <p className="bold">Mi héroe favorito es...</p>
-      <p>Hisoka</p>
-    </div>
-  )
-}
-
-function FavoriteSerie() {
-  return (
-    <div>
-      <img src={serie} alt="Lost" />
-      <p style={{ fontWeight: 'bold' }}>Mi serie favorita es...</p>
-      <p>Lost</p>
+      <FavoriteItem image={work} intruction="Me dedico a..." description="Crear aplicaciones web" />
+      <FavoriteItem image={serie} intruction="Mi serie favorita es..." description="Lost" />
+      <FavoriteItem image={heroe} intruction="Mi héroe favorito es..." description="Hisoka" />
     </div>
   )
 }
