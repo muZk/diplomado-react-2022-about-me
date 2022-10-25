@@ -24,12 +24,10 @@ function FavoriteItem({ image, intruction, description }) {
   )
 }
 
-function FavoriteItems() {
+function FavoriteItems({ children }) {
   return (
     <div className="favorite-items">
-      <FavoriteItem image={work} intruction="Me dedico a..." description="Crear aplicaciones web" />
-      <FavoriteItem image={serie} intruction="Mi serie favorita es..." description="Lost" />
-      <FavoriteItem image={heroe} intruction="Mi héroe favorito es..." description="Hisoka" />
+      {children}
     </div>
   )
 }
@@ -38,7 +36,11 @@ function App() {
   return (
     <div className="App">
       <ProfileHeader />
-      <FavoriteItems />
+      <FavoriteItems>
+        <FavoriteItem image={work} intruction="Me dedico a..." description="Crear aplicaciones web" />
+        <FavoriteItem image={serie} intruction="Mi serie favorita es..." description="Lost" />
+        <FavoriteItem image={heroe} intruction="Mi héroe favorito es..." description="Hisoka" />
+      </FavoriteItems>
     </div>
   );
 }
